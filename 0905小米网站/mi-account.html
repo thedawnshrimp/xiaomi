@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/mi-account.css">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script src="js/jquery.js "></script>
+  <script src="js/store.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+  <style>
+    .container {
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container head" style="margin-top: 70px;margin-bottom: 70px;">
+  <img src="images/n-logo.png" alt="">
+  <span class="pull-right"><a href="login.html">退出</a></span>
+</div>
+
+<div class="container" style="position: relative">
+  <ul class="nav nav-pills" style="border:0">
+    <li class="active"><a href="#security" role="tab" data-toggle="tab">账号安全</a></li>
+    <li><a href="#information" role="tab" data-toggle="tab">个人信息</a></li>
+    <li><a href="#service" role="tab" data-toggle="tab">小米服务</a></li>
+  </ul>
+  <div class="row picture">
+    <div class="col-lg-6">
+      <p class="text-right">虾有油</p>
+      <p>1309890195</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="images/solovely.jpg" style="width:94px;height:94px;" alt="">
+    </div>
+  </div>
+
+  <div class="tab-content" style="border:1px solid grey;border-radius: 15px;;">
+    <div role="tabpanel" class="tab-pane active" id="security">
+      <div class="row" id="line1">
+        <div class="col-lg-3">
+          <h3>安全等级
+            <span style="color: rgb(255,0,0);font-size: 20px;font-weight: bold;">40</span>
+            <span style="color: grey">分</span></h3>
+        </div>
+        <div class="col-lg-6">
+          <div class="progress" style="margin-top: 35px;height:4px;margin-left: -60px;">
+            <div class="progress-bar " style="width: 40%;background: rgb(255,0,0) ">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <p style="margin-top: 15px;">存在<span style="font-size: 24px;color:red;">2</span>项风险</p>
+        </div>
+      </div>
+      <div class="row" id="line2">
+        <div class="col-lg-1 text-center" style="margin-top: 35px;">
+          <img src="images/lock.png" alt="">
+        </div>
+        <div class="col-lg-6 info ">
+          <h4>账户密码</h4>
+          <p style="color: grey">用于保护帐号信息和登录安全</p>
+        </div>
+        <div class="col-lg-offset-3 col-lg-2">
+          <button class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"
+                  style="margin-top: 32px;">修改
+          </button>
+        </div>
+      </div>
+      <div class="row" id="line3">
+        <div class="col-lg-1 text-center" style="margin-top: 35px;">
+          <img src="images/emaill.png" alt="">
+        </div>
+        <div class="col-lg-6 info">
+          <h4>安全邮箱674******@qq.com</h4>
+          <p style="color: grey">安全邮箱可以用于登录小米帐号，重置密码或其他安全验证</p>
+        </div>
+        <div class="col-lg-offset-3 col-lg-2">
+          <button class="btn btn-default btn-md" style="margin-top:32px;">修改</button>
+        </div>
+      </div>
+      <div class="row" id="line4">
+        <div class="col-lg-1 text-center" style="margin-top: 35px;">
+          <img src="images/mi4.png" alt="">
+        </div>
+        <div class="col-lg-6 info">
+          <h4>安全手机 <span class="sectel"></span></h4>
+          <p style="color: grey">安全手机可以用于登录小米帐号，重置密码或其他安全验证</p>
+        </div>
+        <div class="col-lg-offset-3 col-lg-2">
+          <button class="btn btn-default btn-md" style="margin-top: 32px;">修改</button>
+        </div>
+      </div>
+      <div class="row" id="line5">
+        <div class="col-lg-1 text-center" style="margin-top: 35px;">
+          <img src="images/mibao.png" alt="">
+        </div>
+        <div class="col-lg-6 info">
+          <h4>密保问题</h4>
+          <p style="color: grey">密保问题可用于重置密码和其他安全验证</p>
+        </div>
+        <div class="col-lg-offset-3 col-lg-2">
+          <button class="btn btn-default btn-md" style="margin-top: 32px;">修改</button>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--个人信息-->
+    <div role="tabpanel" class="tab-pane" id="information">
+      <div class="row">
+        <div class="col-lg-5 ">
+          <div class="touxiang"><img src="images/solovely.jpg" style="width:94px;height:94px;" alt="">
+            <p><a href="#">设置头像</a></p></div>
+        </div>
+        <div class="col-lg-7 editinfo">
+          <div class="row ">
+            <div class="col-lg-6"><h3>基本资料</h3></div>
+            <div class="col-lg-offset-4 col-lg-2" style="margin-top: 20px;">
+              <div style="margin-top: 28px;">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <a href="#myModal2" data-toggle="modal">编辑</a></div>
+            </div>
+          </div>
+          <p>姓名:<span id="username"></span></p>
+          <p>生日:<span id="year"></span><span id="month"></span><span id="date"></span></p>
+          <p>性别:<span id="sex"></span></p>
+          <h3>高级设置</h3>那
+          <p>银行卡<a href="#" style="float:right;margin-right: 40px;">管理</a></p>
+          <p style="margin-bottom: 50px">账号地区:中国</p>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="service">
+      <h3>您的帐号可以登录以下服务</h3>
+      <div class="content">
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/411.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>小米官网</dt>
+                <dd>小米手机，红米手机，小米平板和小米电视官方正品销</dd>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/412.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>MIUI</dt>
+                <dd>发烧友必刷的Android ROM</dd>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/421.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>云服务</dt>
+                <dd>随时随地，管理你的所有设备和数据</dd>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/422.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>米币中心</dt>
+                <dd>轻松安心充值，乐享小米服务</dd>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/431.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>应用商店</dt>
+                <dd>发现最新最热最好玩的应用</dd>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/422.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>主题商店</dt>
+                <dd>手机百变换装，从此与众不同</dd>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/441.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>多看阅读</dt>
+                <dd>海量畅销电子书免费试读，数百万读者阅读首选</dd>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/442.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>米聊</dt>
+                <dd>轻松社交，米粉乐园</dd>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;margin-bottom: 30px;">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-2"><img src="images/451.png" alt=""></div>
+              <div class="col-lg-10">
+                <dt>小米社区</dt>
+                <dd>小米手机官方论坛</dd>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--底部-->
+  <div class="footer">
+    <div class="row text-center">
+      <span>简体</span><span>繁体</span><span>English</span><span style="border-right: none">常见问题</span>
+      <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+    </div>
+  </div>
+</div>
+
+<!--修改密码的模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <label for="">原密码</label>
+            <input id="oldpwd" type="text" class="form-control" placeholder="输入原密码">
+          </div>
+          <div class="form-group">
+            <label for="">新密码</label>
+            <input id="newpwd" type="password" class="form-control" placeholder="输入新密码">
+            <input id="newpwd2" type="password" class="form-control" style="margin-top: 15px;" placeholder="重复新密码">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="sure" type="button" class="btn btn-primary " onclick="changepwd()">确认</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--修改个人信息的模态框-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑基础资料</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="">
+          <div class="form-group">
+            <label class="control-label col-lg-2">姓名</label>
+            <div class="col-lg-9">
+              <input id="change-name" class="form-control" type="text" maxlength="20" placeholder="姓名">
+            </div>
+          </div>
+          <div class="form-group" id="birth">
+            <label class="control-label col-lg-2">生日</label>
+            <div class="col-lg-3">
+              <input id="change-year" class="form-control" type="text" placeholder="年">
+            </div>
+            <div class="col-lg-3">
+              <input id="change-month" class="form-control" type="text" placeholder="月">
+            </div>
+            <div class="col-lg-3">
+              <input id="change-date" class="form-control" type="text" placeholder="日">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-lg-2">性别</label>
+            <div class="col-lg-9">
+              <input id="change-sex" class="form-control" type="text" maxlength="20">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="tip_btns">
+          <button id="save" role="button" class="btn btn-lg" style="background-color:#FF5500">保存</button>
+          <button role="button" class="btn btn-lg" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  //    点击保存按钮模态框隐藏
+  $("#save").on('click', function () {
+    $("#myModal2").modal('hide');
+  });
+
+  var passkeyvalue = store.get('passkey').replace(/^"|"$/g, "");
+  console.log(passkeyvalue);
+
+  function changepwd() {
+    if ($("#oldpwd").val() == passkeyvalue && $("#newpwd").val() !== $("#oldpwd").val() && $("#newpwd").val() == $("#newpwd2").val()) {
+      var sure = $("#sure");
+      store.update('passkey', $("#newpwd").val());
+      alert("修改成功！");
+      $("input[type='text']").val("");
+      window.location.replace('login.html');
+      $("#myModal").modal('hide');
+    } else if ($("#oldpwd").val() !== passkeyvalue) {
+      alert("原密码输入错误！");
+    } else if ($("#newpwd").val() == $("#oldpwd").val()) {
+      alert("新密码不可与原密码相同！");
+    } else if ($("#newpwd").val() !== $("#newpwd2").val()) {
+      alert("两次输入密码不同！");
+    } else {
+      alert("修改失败！");
+      $("input[type='text']").val("");
+
+    }
+  }
+  $(function () {
+    var usernamea = store.get('username');
+    var yeara = store.get('year');
+    var montha = store.get('month');
+    var datea = store.get('date');
+    var sexa = store.get('sex');
+    $("#username").html(usernamea);
+    $("#year").html(yeara);
+    $("#month").html(montha);
+    $("#date").html(datea);
+    $("#sex").html(sexa);
+    $('#change-name').val(usernamea);
+    $('#change-year').val(yeara);
+    $('#change-month').val(montha);
+    $('#change-date').val(datea);
+    $('#change-sex').val(sexa);
+  });
+  $('#save').click(function () {
+    var name = $('#change-name').val();
+    var year = $('#change-year').val();
+    var month = $('#change-month').val();
+    var date = $('#change-date').val();
+    var sex = $('#change-sex').val();
+    store.update('username', name);
+    store.update('year', year);
+    store.update('month', month);
+    store.update('date', date);
+    store.update('sex', sex);
+
+    $("#username").text(name);
+    $("#year").text(year);
+    $("#month").text(month);
+    $("#date").text(date);
+    $("#sex").text(sex);
+    alert("修改成功！");
+    $("#myModal2").modal('hide');
+  })
+</script>
+
+<script>
+  //    手机号码的获取显示
+  $(function () {
+    var telephone = store.get('telephone');
+    console.log(telephone);
+    $(".seltel").html(telephone);
+    $(".sectel").html(telephone.substring(0, 3) + "******" + telephone.substring(9, 11));
+  });
+
+</script>
+</body>
+</html>
+

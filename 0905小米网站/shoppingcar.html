@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/shoppingcar.css">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script src="js/jquery.js "></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/y-tools.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+<!--购物车头部-->
+<div class="container-fluid carhead">
+  <div class="container ">
+    <div class="row">
+      <div class="col-lg-1">
+        <img src="images/rice.jpg" alt="" style="width:70px;height:70px;margin-top: 20px;">
+      </div>
+      <div class="col-lg-5">
+        <p>
+        <h1>我的购物车</h1>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+      </div>
+      <div class="col-lg-offset-3 col-lg-3 carselect">
+        <ul class="nav navbar-nav ">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="hover" role="button" style="padding-right: 30px">
+              虾有油 <span class="caret"></span></a>
+            <ul class="dropdown-menu text-center ">
+              <li><a href="mi-personal-center.html">个人中心</a></li>
+              <li><a href="../0831作业/Evaluation.html">评价晒单</a></li>
+              <li><a href="">我的喜欢</a></li>
+              <li><a href="mi-account.html">小米账户</a></li>
+              <li><a href="mi-homepage.html">退出登录</a></li>
+            </ul>
+          </li>
+          <li><a href="#">我的订单</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid car-box">
+  <div class="container car-content">
+    <table id="cart">
+      <thead>
+      <tr>
+        <th><label for="all"><input id="all" type="checkbox">全选</label></th>
+        <th>图片</th>
+        <th class="sort" data-sort="fullName">名称</th>
+        <th class="sort" data-sort="price">单价</th>
+        <th class="sort" data-sort="quantity">数量</th>
+        <th class="sort" data-sort="">小计</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+      <tfoot>
+      <tr>
+        <td><label for=""><input type="checkbox" id="allcheck">全选</label></td>
+        <td><a href="#">删除选中的商品</a></td>
+        <td></td>
+        <td>合计：</td>
+        <td class="text-right"></td>
+        <td class="text-right"></td>
+        <td>
+          <button type="button">结算</button>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<div class="container" id="more-goods">
+  <h1 class="text-center">买购物车中商品的人还买了</h1>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="thumbnail">
+        <img src="images/more-goods1.jpg" alt="">
+        <div class="caption text-center" style="margin-top: 25px;">
+          <h4>小米Note 2 全球版</h4>
+          <p style="color:red">3499元</p>
+          <p style="color:gray;width:120px;margin-left:58px;" onmouseover="mOver(this)" onmouseout="mOut(this)">1.7万人好评</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="thumbnail">
+        <img src="images/more-goods2.jpg" alt="">
+        <div class="caption text-center" style="margin-top: 25px;">
+          <h4>小米Note 2 全球版</h4>
+          <p style="color:red">3499元</p>
+          <p style="color:gray;width:120px;margin-left:58px;" onmouseover="mOver(this)" onmouseout="mOut(this)">1.7万人好评</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="thumbnail">
+        <img src="images/more-goods3.jpg" alt="">
+        <div class="caption text-center" style="margin-top: 25px;">
+          <h4>小米Note 2 全球版</h4>
+          <p style="color:red">3499元</p>
+          <p style="color:gray;width:120px;margin-left:58px;" onmouseover="mOver(this)" onmouseout="mOut(this)">1.7万人好评</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="thumbnail">
+        <img src="images/more-goods4.png" alt="">
+        <div class="caption text-center" style="margin-top: 25px;">
+          <h4>小米Note 2 全球版</h4>
+          <p style="color:red">3499元</p>
+          <p style="color:gray;width:120px;margin-left:58px;" onmouseover="mOver(this)" onmouseout="mOut(this)">1.7万人好评</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--版权和服务栏目-->
+<div class="site-footer">
+  <div class="container">
+    <div style="margin:20px;" class="row">
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-heart-empty"></span> 预约维修服务
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-calendar"></span> 7天无理由退货
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-dashboard"></span> 15天免费退货
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-gift"></span> 满150包邮
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-map-marker"></span> 520余家售后网点
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-phone-alt"></span> 客服热线电话
+      </div>
+    </div>
+
+    <div style="margin:20px;border-top: 1px solid grey;padding-top: 20px;" class="row">
+      <div class="col-lg-9 col-xs-9">
+        <div class="row">
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>帮助中心</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>服务支持</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>线下门店</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>关于小米</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>关注我们</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>特色服务</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-3 text-center" style="border-left: 1px solid grey">
+        <p class="text-danger">400-100-5678</p>
+        <p>周一至周日 8:00-18:00 <br>(仅收市话费)</p>
+        <div style="border:1px solid red;width:60%;margin-left: 60px;" class="text-danger "><span
+          class="glyphicon glyphicon-earphone"></span>
+          24小时在线客服
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 20px;">
+      <div class="col-lg-8 col-xs-8">
+        <div class="row">
+          <div class="col-lg-2 col-xs-2 ">
+            <img src="images/rice.jpg" style="width:90px;height:90px;" alt="">
+          </div>
+          <div class="clo-lg-10 col-xs-10">
+            <p><a href="#">小米商城|</a><a href="#">MIUI|</a><a href="#">米聊|</a>
+              <a href="#">多看书城|</a><a href="#">小米路由器|</a><a href="#">小米移动|</a>
+              <a href="#">隐私政策|</a><a href="#">小米路由器|</a><a href="#">小米移动|</a>
+            </p>
+            <p style="font-size: 10px;">©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号
+              京网文[2014]0059-0009号 </p>
+            <p style="font-size: 10px;">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xs-4">
+        <img src="images/f1.png" style="width:80px;height:30px;" alt="">
+        <img src="images/f2.png" alt="">
+        <img src="images/f3.png" alt="">
+        <img src="images/f4.png" alt="">
+      </div>
+    </div>
+    <div style="margin: 20px;">
+      <p class="text-center text-muted">探索黑科技,小米为发烧而生!</p>
+    </div>
+
+  </div>
+
+
+</div>
+
+<script type="text/template" id="tr-template">
+  <tr data-pid="{6}">
+    <td><label for=""><input name="productID" type="checkbox"></label></td>
+    <td><img src="{0}" alt=""></td>
+    <td>{1}</td>
+    <td class="text-right">{3}</td>
+    <td>
+      <button type="button">-</button>
+      <input class="text-right" type="text" value="{4}">
+      <button type="button">+</button>
+    </td>
+    <td class="text-right">{5}</td>
+    <td>
+      <a href="#"><span class="glyphicon glyphicon-trash" style="margin-right: 8px;margin-left: 8px;"></span>删除</a>
+    </td>
+  </tr>
+</script>
+
+<script>
+  $(function () {
+    $('[data-toggle=hover]').parent().on('mouseenter mouseleave', function () {
+      $(this).toggleClass('open');
+    });
+  })
+</script>
+<script>
+  function mOver(obj) {
+    obj.innerHTML = "加入购物车";
+    obj.style.color = "white";
+    obj.style.border = "1px solid #FF5500";
+    obj.style.backgroundColor = "#FF5500";
+  }
+  function mOut(obj) {
+    obj.innerHTML = "1.1万人好评";
+    obj.style.border = "none";
+    obj.style.color = "gray";
+    obj.style.backgroundColor = "transparent";
+  }
+</script>
+</body>
+</html>

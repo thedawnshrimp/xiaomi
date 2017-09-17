@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script src="js/store.js"></script>
+  <script src="js/jquery.js "></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container head">
+  <div class="row">
+    <div class="col-lg-1">
+      <img src="images/rice.jpg" alt=""></div>
+    <div class="col-lg-4">
+      <h2>小米商城</h2>
+      <p>让每个人都能享受科技的乐趣</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid middle" style="padding: 0; ">
+  <div class="inline">
+    <ul class="nav nav-tabs text-center">
+      <li class="active"><a href="#tab1" data-toggle="tab"><h3 style="color:#f56600">账号登录</h3></a>
+      <li><a href="#tab2" data-toggle="tab"><h3 style="color: black">扫码登录</h3></a>
+    </ul>
+    <div class="tab-content">
+      <div class="active tab-pane" id="tab1">
+        <form action="" style="margin:15px;padding-top: 10px;">
+          <input type="text" class="form-control input-lg" id="loginname" placeholder="邮箱/手机号码/小米账号">
+          <input type="password" class="form-control input-lg" id="password" placeholder="密码">
+          <button class="btn btn-block btn-lg" type="button" onclick="login()">立即登录</button>
+        </form>
+        <div class="row">
+          <div class="col-lg-4 col-lg-offset-2"><p style="border-right:2px solid grey">注册小米账号</p></div>
+          <div class="col-lg-4"><p>忘记密码?</p></div>
+        </div>
+        <div class="dibu" style="width:100%">
+          <p class="text-center">其他方式登录</p>
+          <p><img src="images/QQ.png" alt="">
+            <img src="images/weibo.jpg" alt="">
+            <img src="images/wexin.jpg" alt="">
+            <img src="images/zfbzfb.png" alt=""></p>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <div class="text-center code"><img src="images/ercode.png"></div>
+        <p class="text-center">使用小米商城APP扫一扫</p>
+        <p class="text-center">请打开「设置 > 小米帐号 > 右上角扫一扫」扫码登录</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="row text-center">
+    <span>简体</span><span>繁体</span><span>English</span><span style="border-right: none">常见问题</span>
+    <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+  </div>
+</div>
+
+<script>
+  var userkeya = store.get('userkey');
+  var passkeya = store.get('passkey');
+  userkeya = userkeya.replace(/^"|"$/g, "");
+  passkeya = passkeya.replace(/^"|"$/g, "");
+  console.log(userkeya);
+  console.log(passkeya);
+  function login() {
+    if ($("#loginname").val() == userkeya && $("#password").val() == passkeya) {
+      alert("登录成功！");
+      store.add("isLogin", true);
+      window.location.href = "mi-homepage.html";
+      return true;
+    }
+    else {
+      alert("账号或密码错误！请重新输入！");
+      return false;
+    }
+  }
+</script>
+</body>
+</html>

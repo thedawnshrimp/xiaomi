@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .row {
+      margin-bottom: 40px;;
+    }
+  </style>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script src="js/store.js"></script>
+  <script src="js/jquery.js "></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="text-center">
+      <img src="images/rice.jpg" style="width:60px;height:60px;" alt="">
+      <h1>小米帐号注册</h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <form class="form-inline" action="">
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <label for="">输入账号</label>
+        <input id="user" class="form-control" type="text">
+        <p id="p1"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <label for="">输入密码</label>
+        <input id="password" class="form-control" type="password">
+        <p id="p2"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <label for="">重输密码</label>
+        <input id="passwordAgain" class="form-control" type="password">
+        <p id="p3"></p>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="col-lg-6 col-lg-offset-5">
+  <button id="submit" class="btn btn-primary col-lg-2">注册</button>
+</div>
+
+<script>
+  //  账号密码等的格式验证
+  window.onload = function () {
+    var userName = document.getElementById('user');
+    var oPassword = document.getElementById('password');
+    var oPasswordAgain = document.getElementById('passwordAgain');
+    var oP1 = document.getElementById('p1');
+    var oP2 = document.getElementById('p2');
+    var oP3 = document.getElementById('p3');
+
+    fn1(userName, oP1, /^[0-9A-Za-z\u4e00-\u9fa5]{4,8}$/);
+    fn1(oPassword, oP2, /^[0-9A-Za-z]{4,8}$/);
+    fn1(oPasswordAgain, oP3, /^[0-9A-Za-z]{4,8}$/);
+
+    function fn1(obj, p, zz) {
+      obj.onfocus = function () {
+        p.innerHTML = '请输入4-8位中文英文数字组成的字符';
+        obj.style.borderColor = '';
+        if (zz.test(obj.value)) {
+          obj.style.borderColor = 'green';
+        }
+      };
+      obj.onblur = function () {
+        if (!zz.test(obj.value)) {
+          obj.style.borderColor = 'red';
+          p.innerHTML = '输入格式错误！';
+          p.style.color = 'red'
+        } else {
+          obj.style.borderColor = 'green';
+          p.innerHTML = '输入格式正确！';
+          p.style.color = 'green';
+        }
+      };
+    }
+
+    $('#submit').click(function () {
+      if (/^[0-9A-Za-z\u4e00-\u9fa5]{4,8}$/.test(userName.value) && /^[0-9A-Za-z\u4e00-\u9fa5]{4,8}$/.test(oPassword.value) && /^[0-9A-Za-z\u4e00-\u9fa5]{4,8}$/.test(oPasswordAgain.value) && oPassword.value == oPasswordAgain.value) {
+        alert('注册成功！');
+
+        var username = $('#user').val();
+        var password = $('#password').val();
+        store.update('keyUsername', username);
+        store.update('keyPassword', password);
+        window.location.replace('login.html');
+        console.log(username);
+        console.log(password);
+      } else if (oPassword.value != oPasswordAgain.value) {
+        alert('两次密码不一致,请重新输入');
+        oP3.style.borderColor = 'green';
+        oP3.innerHTML = '输入密码有误';
+        oP3.style.color = 'red';
+        return false;
+      }
+      else if (/^[0-9A-Za-z\u4e00-\u9fa5]{4,8}$/.test(userName.value) != true) {
+        alert('账号格式不符合要求,请重新输入！');
+      }
+      else {
+        alert('密码格式有误,请重新输入！');
+      }
+    })
+  };
+</script>
+</body>
+</html>

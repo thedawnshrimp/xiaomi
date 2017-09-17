@@ -1,0 +1,85 @@
+.carselect {
+  margin-top: 35px;
+}
+
+.carselect a {
+  color: #3c3c3c;
+}
+
+.carhead {
+  background-color: white;
+  border-bottom: 3px solid #f56600;
+}
+
+.sort, .sort-asc, .sort-desc {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.sort {
+  background-image: url(../images/sort_both.png);
+}
+
+.sort-asc {
+  background-image: url(../images/sort_asc.png);
+}
+
+.sort-desc {
+  background-image: url(../images/sort_desc.png);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #3c3c3c;
+}
+
+#cart img {
+  width: 220px;
+  height: 140px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.car-box {
+  background-color: rgb(245, 245, 245);
+
+}
+
+.car-content {
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.add-to-car a {
+  color: gray;
+  text-decoration: none;
+}
+
+.add-to-car a:hover {
+  border: 1px solid #f56600;
+  background-color: #f56600;
+  color: white;
+  padding: 5px;
+}
+
+#more-goods h1 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #757575;
+}
+
+#more-goods a {
+  text-decoration: none;
+}
+
+#more-goods .thumbnail:hover {
+  box-shadow: 5px 5px 10px #ccc;
+}

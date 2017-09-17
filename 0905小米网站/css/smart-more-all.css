@@ -1,0 +1,95 @@
+li a {
+  color: black;
+}
+
+#head1 li {
+  list-style: none;
+  display: inline;
+  font-size: 16px;
+  margin-left: 70px;
+}
+
+#head2 li {
+  list-style: none;
+  display: inline;
+  font-size: 16px;
+  margin-left: 80px;
+}
+
+.zuo span {
+  font-size: 16px;
+  margin-right: 30px;
+}
+
+.zuo span a:hover {
+  color: #FF5500;
+}
+
+.right {
+  font-size: 16px;
+}
+
+.right a, .zuo a {
+  text-decoration: none;
+  color: black;
+}
+
+.right a:hover {
+  color: #FF5500;
+}
+
+.box h4 {
+  margin-top: 20px;
+}
+
+.box:hover {
+  box-shadow: 5px 5px 5px gray;
+}
+
+#carousel-more h5 {
+  margin-top: 30px;
+}
+
+#carousel-more button:hover {
+  background-color: #f56600;
+}
+
+#carousel-more a {
+  text-decoration: none;
+}
+
+.zuo a {
+  text-decoration: none;
+}
+
+#fenlei {
+  font-size: 16px;
+  margin-left: -15px;
+}
+
+#daohangone, #daohangtwo {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#fenlei a {
+  text-decoration: none;
+  color: #333;
+}
+
+#fenlei a:hover {
+  color: #FF5500;
+}
+
+#fenlei > .row {
+  height: 60px;
+}
+
+.daohang .col-lg-2, .col-lg-1 {
+  margin-top: 20px;
+}
+
+.thumbnail:hover {
+  box-shadow: 5px 5px 10px #ccc;
+}
+

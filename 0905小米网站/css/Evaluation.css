@@ -1,0 +1,27 @@
+.personal {
+  background-color: white;
+  width: 180px;
+  margin-bottom: 40px;
+  float: left;
+}
+
+dl {
+  padding-top: 10px;
+  margin-left: 40px;
+}
+
+.pingjia {
+  background-color: white;
+  width: 960px;
+  margin-left: 20px;
+  float: left;
+}
+
+.pingjia h3 {
+  color: gray;
+  margin-left: 20px;
+}
+
+.pingjia a {
+  text-decoration: none;
+}

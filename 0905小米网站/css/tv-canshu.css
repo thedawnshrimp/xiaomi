@@ -1,0 +1,105 @@
+.tv li {
+  list-style: none;
+  display: inline;
+  margin-left: 18px;
+}
+
+.tv li a {
+  color: black;
+  text-decoration: none;
+}
+
+.tv li a:hover {
+  color: #f56600;
+}
+
+.purchase {
+  padding: 5px;
+  border: 1px solid #f56600;
+  background-color: #f56600;
+}
+
+.purchase a {
+  color: white;
+}
+
+.box {
+  height: 325px;
+  border-bottom: 1px solid gray;
+}
+
+.distance {
+  margin-top: 30px;
+}
+
+.canshu, .chuliqi {
+  height: 180px;
+  border-bottom: 1px solid gray;
+}
+
+.wuxian {
+  height: 140px;
+  border-bottom: 1px solid gray;
+}
+
+.jiekou {
+  height: 200px;
+  border-bottom: 1px solid gray;
+}
+
+.yingyin {
+  height: 220px;
+  border-bottom: 1px solid gray;
+}
+
+.tvsize {
+  height: 280px;
+  border-bottom: 1px solid gray;
+}
+
+.wenzi {
+  height: 180px;
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+
+.wenzi p {
+  margin-top: 60px;
+}
+
+.zn {
+  border-bottom: 1px solid gray;
+}
+
+#fixtop {
+  border-bottom: 1px solid #e0e0e0;
+  height: 70px;
+  background-color: lightgray;
+}
+
+.baocontent {
+  height: 230px;
+  border-bottom: 1px solid gray;
+
+}
+
+.wallsize {
+  height: 220px;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+}
+
+.wallcontent, .wallpicture {
+  margin-top: 40px;
+}
+
+.system {
+  height: 200px;
+  border-bottom: 1px solid gray;
+}
+
+.systemcontent {
+  margin-top: 50px;
+  font-weight: bold;
+}
+

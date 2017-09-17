@@ -1,0 +1,65 @@
+.outside {
+  position: relative;
+}
+
+.inside {
+  width: 288px;
+  height: 428px;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shadow1, .shadow2 {
+  position: absolute;
+  width: 300px;
+  top: 165px;
+  margin-left: 260px;
+  background-color: white;
+  display: none;
+}
+
+.shadow p {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+#sbox img {
+  width: 1140px;
+  height: 411px;
+}
+
+#ul1 > a:hover {
+  background-color: #ff6700;
+}
+
+#dawn img {
+  width: 265px;
+  height: 170px;
+}
+
+#showfour {
+  height: 200px;
+  padding-top: 20px;
+}
+
+.addmore .row {
+  margin-top: 50px;
+}
+
+.addmore .thumbnail {
+  height: 160px;
+}
+
+.thumbnail:hover {
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+#carousel-content2 img, #carousel-content3 img, #carousel-content4 img {
+  margin-bottom: 30px;
+}
+
+#carousel-content1 img {
+  margin-bottom: 42px;
+}

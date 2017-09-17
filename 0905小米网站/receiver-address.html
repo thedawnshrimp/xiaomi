@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .big > div {
+      float: left;
+    }
+
+    .a {
+      width: 250px;
+      height: 180px;
+      float: left;
+      border: 1px solid gray;
+      text-align: center;
+      margin-left: 15px;
+      padding: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script src="js/jquery.js "></script>
+  <script src="js/store.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/modify-address.js"></script>
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default navbar-inverse" style="border-radius: 0;">
+  <div class="container" style="padding: 0">
+    <div class="row">
+      <div class="col-lg-8">
+        <ul class="nav navbar-nav">
+          <li><a href="#">小米商城</a></li>
+          <li><a href="#">MIUI</a></li>
+          <li><a href="#">米聊</a></li>
+          <li><a href="#">多看阅读</a></li>
+          <li><a href="#">云服务</a></li>
+          <li><a href="#">金融</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="hover" role="button" style="padding-right: 30px">
+              虾有油 <span class="caret"></span></a>
+
+            <ul class="dropdown-menu text-center">
+              <li><a href="mi-personal-center.html">个人中心</a></li>
+              <li><a href="../0831作业/Evaluation.html">评价晒单</a></li>
+              <li><a href="">我的喜欢</a></li>
+              <li><a href="mi-account.html">小米账户</a></li>
+              <li><a href="mi-homepage.html">退出登录</a></li>
+            </ul>
+          </li>
+          <li><a href="#">消息通知</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="hover" role="button" style="padding-right: 30px">
+              购物车</a>
+            <ul class="dropdown-menu" style="width:400px;max-height: 200px;overflow-y:auto ">
+              <p class="text-center">购物车中还没有商品,赶紧来选购吧!</p>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav class="navbar " style="position: relative;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <a href="#"><img style="width:50px;height:50px;" src="images/rice.jpg" alt=""></a>
+      </div>
+      <div class="col-lg-7">
+        <ul id="boxes" class="nav navbar-nav">
+          <li class="panel"><a data-toggle="collapse" data-id="0" href="#collapseEg1" data-collapse-trigger="hover"
+                               data-target="#collapseEg1">小米手机</a></li>
+          <li class="panel"><a data-toggle="collapse" data-id="1" href="#collapseEg2" data-collapse-trigger="hover"
+                               data-target="#collapseEg2">红米</a></li>
+          <li class="panel"><a data-toggle="collapse" data-id="2" href="#collapseEg3" data-collapse-trigger="hover"
+                               data-target="#collapseEg3">平板笔记本</a></li>
+          <li class="panel"><a data-toggle="collapse" data-id="3" href="#collapseEg4" data-collapse-trigger="hover"
+                               data-target="#collapseEg4">电视</a></li>
+          <li class="panel"><a data-toggle="collapse" data-id="4" href="#collapseEg5" data-collapse-trigger="hover"
+                               data-target="#collapseEg5">盒子影音</a></li>
+          <li><a href="#">路由器</a></li>
+          <li><a href="#">智能软件</a></li>
+          <li><a href="#">服务</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 ">
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control" placeholder="红米Noet5A">
+        <span class="input-group-btn">
+        <button class="btn btn-default btn" type="button">
+          <span class="glyphicon glyphicon-search"></span></button>
+      </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="collapse container " id="collapseEg1" style="top: 70px;position: absolute; z-index: 1000;width:100%;">
+    <div class="well">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/h1.jpg" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p class="text-danger">2499元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/a2.png" alt="">
+            <div class="caption">
+              <p>小米Max 2</p>
+              <p class="text-danger">1699元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/a3.jpg" alt="">
+            <div class="caption">
+              <p>小米5X</p>
+              <p class="text-danger">1299元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/a4.jpg" alt="">
+            <div class="caption">
+              <p>小米Note 2</p>
+              <p class="text-danger">2799元起</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEg2" style="top: 70px;position: absolute; z-index: 1000;width:100%">
+    <div class="well">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/a2.png" alt="">
+            <div class="caption">
+              <p>红米Note 5A 标准版</p>
+              <p class="text-danger">699元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/b1.jpg" alt="">
+            <div class="caption">
+              <p>红米Note 5A 高配版</p>
+              <p class="text-danger">899元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/b3.jpg" alt="">
+            <div class="caption">
+              <p>红米4X</p>
+              <p class="text-danger">699元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/b4.jpg" alt="">
+            <div class="caption">
+              <p>红米4</p>
+              <p class="text-danger">799元起</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEg3" style="top: 70px;position: absolute; z-index: 1000;width:100%">
+    <div class="well">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navipai.jpg" alt="">
+            <div class="caption">
+              <p>小米笔记本Air 12.5"</p>
+              <p class="text-danger">3599元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navipai.jpg" alt="">
+            <div class="caption">
+              <p>小米笔记本Air 12.5"</p>
+              <p class="text-danger">3599元起</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEg4" style="top: 70px;position: absolute; z-index: 1000;width:100%">
+    <div class="well">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navtv.png" alt="">
+            <div class="caption">
+              <p>小米电视4A 43英寸</p>
+              <p class="text-danger">1999元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navtv.png" alt="">
+            <div class="caption">
+              <p>小米电视4A 43英寸</p>
+              <p class="text-danger">1999元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navtv.png" alt="">
+            <div class="caption">
+              <p>小米电视4A 43英寸</p>
+              <p class="text-danger">1999元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navtv.png" alt="">
+            <div class="caption">
+              <p>小米电视4A 43英寸</p>
+              <p class="text-danger">1999元起</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEg5" style="top: 70px;position: absolute; z-index: 1000;width:100%">
+    <div class="well">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navaudio.png" alt="">
+            <div class="caption">
+              <p>小米盒子3 增强版</p>
+              <p class="text-danger">399元起</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="thumbnail text-center">
+            <img src="images/navaudio.png" alt="">
+            <div class="caption">
+              <p>小米盒子3 增强版</p>
+              <p class="text-danger">399元起</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!--内容部分-->
+<div class="container-fluid" style="background-color: rgb(245,245,245)">
+  <div class="container" style="background-color: white;">
+    <!--路径导航-->
+    <div class="row gps">
+      <ol class="breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li class="active">个人中心</li>
+      </ol>
+    </div>
+    <!--中间内容-->
+    <div class="row">
+      <div class="col-lg-2">
+        <dl>
+          <dt>订单中心</dt>
+          <dd><a href="shoppingcar.html" style="color:#333;">我的订单</a></dd>
+          <dd>意外保</dd>
+          <dd>团购订单</dd>
+          <dd><a href="../0831作业/Evaluation.html" style="color:#333;">评价晒单</a></dd>
+          <dd>话费充值订单</dd>
+          <dd>以旧换新订单</dd>
+        </dl>
+        <dl>
+          <dt>个人中心</dt>
+          <dd><a href="mi-personal-center.html" style="color:#333;">我的个人中心</a></dd>
+          <dd>消息通知</dd>
+          <dd>购买资格</dd>
+          <dd>现金账户</dd>
+          <dd>小米礼品卡</dd>
+          <dd>现金券</dd>
+          <dd>喜欢的商品</dd>
+          <dd>优惠券</dd>
+          <dd style="color: rgb(245,102,0);">收货地址</dd>
+        </dl>
+        <dl>
+          <dt>售后服务</dt>
+          <dd>服务记录</dd>
+          <dd>申请服务</dd>
+          <dd>领取快递报销</dd>
+        </dl>
+        <dl>
+          <dt>账户管理</dt>
+          <dd><a href="mi-account.html" style="color:#333;">个人信息</a></dd>
+          <dd><a href="mi-account.html" style="color:#333;">修改密码</a></dd>
+          <dd><a href="mi-account.html" style="color:#333;">社区VIP认证</a></dd>
+        </dl>
+      </div>
+      <div class="col-lg-10">
+        <div class="row">
+          <div class="col-lg-12">
+          </div>
+        </div>
+        <div class="row addaddress">
+          <div class="big">
+            <div class="addnew text-center" style="margin-left: 15px; width:250px;height:180px;border:1px solid gray;">
+              <h2>收货地址</h2>
+              <p><span class="glyphicon glyphicon-plus-sign modal-title" id="myModalLabel" href="#motaikuang"
+                       data-toggle="modal"></span></p>
+              <p><a href="#motaikuang" data-toggle="modal">添加新地址</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="motaikuang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">添加新地址</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-lg-6">
+                  <input id="address-name" class="form-control" type="text" maxlength="20" placeholder="收货人姓名">
+                </div>
+                <div class="col-lg-6">
+                  <input id="address-tel" class="form-control" type="text" maxlength="20" placeholder="联系电话">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-4">
+                  <select class="form-control" id="province" name="province" onchange="doProvAndCityRelation();">
+                    　
+                    <option id="choosePro" value="-1">请选择您所在省份</option>
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-control" id="citys" name="city" onchange="doCityAndCountyRelation();">
+                    　
+                    <option id='chooseCity' value='-1'>请选择您所在城市</option>
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-control" id="county" name="county">
+                    　
+                    <option id='chooseCounty' value='-1'>请选择您所在区/县</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                  <textarea name="" id="address-details" cols="30" rows="4" placeholder="请输入详细地址"
+                            style="resize:none; width:567px; height:70px;"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-6">
+                  <input id="address-pc" type="text" class="form-control" placeholder="邮政编码">
+                </div>
+                <div class="col-lg-6">
+                  <input id="address-tip" class="form-control" type="text" placeholder="地址标签：如家/公司">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="tip_btns">
+              <button role="button" class="btn btn-lg btn-primary" id="add">新增地址
+              </button>
+              <button role="button" class="btn btn-lg btn-danger" data-dismiss="modal">取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="motaikuang2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改收货地址</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-lg-6">
+                  <input id="address-name2" class="form-control" type="text" maxlength="20" placeholder="收货人姓名">
+                </div>
+                <div class="col-lg-6">
+                  <input id="address-tel2" class="form-control" type="text" maxlength="20" placeholder="联系电话">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-4">
+                  <input id="address-county2" name="county2" class="form-control" type="text" maxlength="20"
+                         placeholder="省份">
+                </div>
+                <div class="col-lg-4">
+                  <input id="address-city2" name="city2" class="form-control" type="text" maxlength="20"
+                         placeholder="市区">
+                </div>
+                <div class="col-lg-4">
+                  <input id="address-country2" name="county2" class="form-control" type="text" maxlength="20"
+                         placeholder="区/县">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                  <textarea name="details2" id="address-details2" cols="30" rows="4" placeholder="详细地址"
+                            style="resize:none; width:567px; height:70px;"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-6">
+                  <input id="address-pc2" type="text" class="form-control" placeholder="邮政编码">
+                </div>
+                <div class="col-lg-6">
+                  <input id="address-tip2" class="form-control" type="text" placeholder="地址标签：如家/公司">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="tip_btns">
+              <button role="button" class="btn btn-lg btn-primary bg-primary" id="xiugai">确认修改</button>
+              <button role="button" class="btn btn-lg btn-danger bg-danger" data-dismiss="modal">取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--版权与服务栏目-->
+<div class="site-footer">
+  <div class="container">
+    <div style="margin:20px;" class="row">
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-heart-empty"></span> 预约维修服务
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-calendar"></span> 7天无理由退货
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-dashboard"></span> 15天免费退货
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-gift"></span> 满150包邮
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-map-marker"></span> 520余家售后网点
+      </div>
+      <div class="col-lg-2 col-xs-2">
+        <span class="glyphicon glyphicon-phone-alt"></span> 客服热线电话
+      </div>
+    </div>
+
+    <div style="margin:20px;border-top: 1px solid grey;padding-top: 20px;" class="row">
+      <div class="col-lg-9 col-xs-9">
+        <div class="row">
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>帮助中心</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>服务支持</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>线下门店</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>关于小米</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>关注我们</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+          <div class="col-lg-2 col-xs-2">
+            <dl>
+              <dt>特色服务</dt>
+              <dd>账户管理</dd>
+              <dd>购物指南</dd>
+              <dd>订单操作</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-3 text-center" style="border-left: 1px solid grey">
+        <p class="text-danger">400-100-5678</p>
+        <p>周一至周日 8:00-18:00 <br>(仅收市话费)</p>
+        <div style="border:1px solid red;width:60%;margin-left: 60px;" class="text-danger "><span
+          class="glyphicon glyphicon-earphone"></span>
+          24小时在线客服
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 20px;">
+      <div class="col-lg-8 col-xs-8">
+        <div class="row">
+          <div class="col-lg-2 col-xs-2 ">
+            <img src="images/rice.jpg" style="width:90px;height:90px;" alt="">
+          </div>
+          <div class="clo-lg-10 col-xs-10">
+            <p><a href="#">小米商城|</a><a href="#">MIUI|</a><a href="#">米聊|</a>
+              <a href="#">多看书城|</a><a href="#">小米路由器|</a><a href="#">小米移动|</a>
+              <a href="#">隐私政策|</a><a href="#">小米路由器|</a><a href="#">小米移动|</a>
+            </p>
+            <p style="font-size: 10px;">©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号
+              京网文[2014]0059-0009号 </p>
+            <p style="font-size: 10px;">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xs-4">
+        <img src="images/f1.png" style="width:80px;height:30px;" alt="">
+        <img src="images/f2.png" alt="">
+        <img src="images/f3.png" alt="">
+        <img src="images/f4.png" alt="">
+      </div>
+    </div>
+    <div style="margin: 20px;">
+      <p class="text-center text-muted">探索黑科技,小米为发烧而生!</p>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<script>
+  $(function () {
+    $('[data-toggle=hover]').parent().on('mouseenter mouseleave', function () {
+      $(this).toggleClass('open');
+    });
+  });
+  $(document).ready(function () {
+    $('.carousel').carousel({
+      interval: 2000
+    })
+  });
+  var enterTimeout = [], leaveTimeout = [];
+  $(document).off('click.bs.collapse.data-api', '[data-toggle="collapse"]');
+  $('[data-collapse-trigger=hover]').hover(function () {
+    var i = $(this);
+    var index = Number(i.data('id'));
+    clearTimeout(leaveTimeout[index]);
+    clearTimeout(enterTimeout[index]);
+    enterTimeout[index] = setTimeout(function () {
+      var target = i.data('target');
+      $(target).collapse('show');
+    }, 350);
+    //$(this).trigger('click');
+
+  }, function () {
+    var i = $(this);
+    var index = Number(i.data('id'));
+    clearTimeout(enterTimeout[index]);
+    clearTimeout(leaveTimeout[index]);
+    leaveTimeout[index] = setTimeout(function () {
+      var target = i.data('target');
+      $(target).collapse('hide');
+    }, 350);
+  });
+
+
+  var addresskey = 'addresskey';
+  var addressList = store.get('addresskey', []);
+  var html = '';
+  for (var i = 0; i < addressList.length; i++) {
+
+    html += '<div><dl class="a" data-num="' + addressList[i].id + '"><dt>';
+    html += '<span class="uname">' + addressList[i].addname + '</span>';
+    html += '</dt><dd class="utel">' + addressList[i].tel + '</dd>';
+    html += '<dd class="uaddress">' + addressList[i].province + addressList[i].city + addressList[i].county + '</dd>';
+    html += '<dd class="uaddress">' + addressList[i].details + addressList[i].tip + '</dd>';
+    html += '<dd class="uaddress">' + addressList[i].pc + '</dd>' +
+      '<dd class="onchange"><div>' + '<button class="btn btn-primary update"  id="myModalLabel2" href="#motaikuang2" data-toggle="modal" >修改</button>' +
+      '<button class="btn btn-danger delete">删除</button>' +
+      '</div></dd></dl></div>';
+  }
+  $('.big').append(html);
+
+  $('#add').click(function () {
+    var addname = $('#address-name').val();
+    var tel = $('#address-tel').val();
+    var province = $('#province>option:selected').text();
+    var city = $('#citys>option:selected').text();
+    var county = $('#county>option:selected').text();
+    var details = $('#address-details').val();
+    var pc = $('#address-pc').val();
+    var tip = $('#address-tip').val();
+    var id = 1;
+    if (addressList.length > 0) {
+      id = addressList[addressList.length - 1].id + 1;
+    }
+    var address = {
+      "id": id,
+      "addname": addname,
+      "tel": tel,
+      "province": province,
+      "city": city,
+      "county": county,
+      "details": details,
+      "pc": pc,
+      "tip": tip
+    };
+    addressList.push(address);
+    store.update('addresskey', addressList);
+    var html = "";
+    html += '<div><dl class="a" data-num="' + address.id + '"><dt>';
+    html += '<span class="uname">' + address.addname + '</span>';
+    html += '</dt><dd class="utel">' + address.tel + '</dd>';
+    html += '<dd class="uaddress">' + address.province + address.city + address.county + '</dd>';
+    html += '<dd class="uaddress">' + address.details + address.tip + '</dd>';
+    html += '<dd class="uaddress">' + address.pc + '</dd>' +
+      '<dd class="onchange">' + '<div>' + '<button class="btn btn-primary update"  id="myModalLabel2" href="#motaikuang2" data-toggle="modal" >修改</button>' +
+      '<button class="btn btn-danger delete">删除</button>' +
+      '</div></dd>' +
+      '</dl></div>';
+
+    $(".big").append(html);
+    $("input[type='text']").val("");
+    $("textarea").val("");
+    $("select").val("");
+    $("#motaikuang").modal('hide');
+  });
+  $('.big').on('click', '.delete', function () {
+    var id = $(this).parents('.a').data('num');
+    console.log(id);
+    $(this).parents('.a').remove();
+    for (var i = 0; i < addressList.length; i++) {
+      if (addressList[i].id == id) {
+        addressList.splice(i, 1);
+        break;
+      }
+    }
+    store.update('addresskey', addressList);
+  })
+</script>
+
+<!--获取省市区的json-->
+<script>
+  $.getJSON("city.json", function (obj) {
+      cityJson = obj;
+      var sb = new StringBuffer();
+      $.each(obj, function (i, val) {
+        if (val.item_code.substr(2, 4) == '0000') {
+          sb.append("<option value='" + val.item_code + "'>" + val.item_name + "</option>");
+        }
+      });
+      $("#choosePro").after(sb.toString());
+    }
+  );
+  // 省值变化时 处理市
+  function doProvAndCityRelation() {
+    var city = $("#citys");
+    var county = $("#county");
+    if (city.children().length > 1) {
+      city.empty();
+    }
+    if (county.children().length > 1) {
+      county.empty();
+    }
+    if ($("#chooseCity").length == 0) {
+      city.append("<option id='chooseCity' value='-1'>请选择您所在城市</option>");
+    }
+    if ($("#chooseCounty").length == 0) {
+      county.append("<option id='chooseCounty' value='-1'>请选择您所在区/县</option>");
+    }
+    var sb = new StringBuffer();
+    $.each(cityJson, function (i, val) {
+      if (val.item_code.substr(0, 2) == $("#province").val().substr(0, 2) && val.item_code.substr(2, 4) != '0000' && val.item_code.substr(4, 2) == '00') {
+        sb.append("<option value='" + val.item_code + "'>" + val.item_name + "</option>");
+      }
+    });
+    $("#chooseCity").after(sb.toString());
+  }
+  // 市值变化时 处理区/县
+  function doCityAndCountyRelation() {
+    var cityVal = $("#citys").val();
+    var county = $("#county");
+    if (county.children().length > 1) {
+      county.empty();
+    }
+    if ($("#chooseCounty").length == 0) {
+      county.append("<option id='chooseCounty' value='-1'>请选择您所在区/县</option>");
+    }
+    var sb = new StringBuffer();
+    $.each(cityJson, function (i, val) {
+      if (cityVal == '110100' || cityVal == "120100" || cityVal == "310100" || cityVal == "500100") {
+        if (val.item_code.substr(0, 3) == cityVal.substr(0, 3) && val.item_code.substr(4, 2) != '00') {
+          sb.append("<option value='" + val.item_code + "'>" + val.item_name + "</option>");
+        }
+      } else {
+        if (val.item_code.substr(0, 4) == cityVal.substr(0, 4) && val.item_code.substr(4, 2) != '00') {
+          sb.append("<option value='" + val.item_code + "'>" + val.item_name + "</option>");
+        }
+      }
+    });
+    $("#chooseCounty").after(sb.toString());
+
+  }
+  function StringBuffer(str) {
+    var arr = [];
+    str = str || "";
+    var size = 0;  // 存放数组大小
+    arr.push(str);
+    // 追加字符串
+    this.append = function (str1) {
+      arr.push(str1);
+      return this;
+    };
+    // 返回字符串
+    this.toString = function () {
+      return arr.join("");
+    };
+    // 清空
+    this.clear = function (key) {
+      size = 0;
+      arr = [];
+    };
+    // 返回数组大小
+    this.size = function () {
+      return size;
+    };
+    // 返回数组
+    this.toArray = function () {
+      return buffer;
+    };
+    // 倒序返回字符串
+    this.doReverse = function () {
+      var str = buffer.join('');
+      str = str.split('');
+      return str.reverse().join('');
+    }
+  }
+</script>
+</body>
+</html>
